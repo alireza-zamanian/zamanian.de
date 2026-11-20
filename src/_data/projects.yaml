@@ -40,8 +40,8 @@
       sie verlässlich macht.
 
 - industry: { en: Medical AI, de: Medizinische KI }
-  type: { en: Research · Fraunhofer IKS, de: Forschung · Fraunhofer IKS }
-  years: 2021–2024
+  type: { en: Research, de: Forschung }
+  years: 2019–2024
   title:
     en: Methods for trustworthy medical AI
     de: Methoden für vertrauenswürdige medizinische KI

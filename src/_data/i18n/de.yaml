@@ -38,7 +38,6 @@ proof:
   - Promotion in Informatik, TUM
   - KI-Teamleiter bei SYNLAB International
   - (ehemals) Forschung bei Fraunhofer IKS & Helmholtz Munich
-  - Publikationen u. a. in Statistics in Medicine & JMLR
 
 services:
   label: Leistungen
@@ -103,10 +102,10 @@ approach:
       meta: Kostenlos · 30 Min.
       text: Wir sprechen über Ihre Herausforderung und darüber, ob ich der Richtige dafür bin. Unverbindlich.
     - name: Workshop
-      meta: Festpreis
+      meta: Festpreis nach Angebot
       text: Eine fokussierte Sitzung (halber oder ganzer Tag) zu Ihren Anwendungsfällen. Sie erhalten eine priorisierte, schriftliche Roadmap.
     - name: Lösungskonzept
-      meta: Festpreis
+      meta: Festpreis nach Angebot
       text: Architektur, Machbarkeitsprüfung sowie Aufwands- und Kostenschätzung – eine solide Grundlage für Ihre Entscheidung.
     - name: Umsetzung & Begleitung
       meta: Tagessatz
@@ -123,8 +122,7 @@ about:
     - >-
       Zuvor habe ich fünf Jahre in der angewandten Forschung bei Fraunhofer IKS und Helmholtz
       Munich gearbeitet und an der TUM in Informatik promoviert – zum Thema vertrauenswürdige KI
-      in der Medizin. Meine Arbeiten zu fehlenden Daten, Erklärbarkeit und kausaler Inferenz sind
-      unter anderem in JMLR und Statistics in Medicine erschienen.
+      in der Medizin.
     - >-
       Angefangen habe ich als Data Scientist in der Industrie, nach einem Studium des Maschinenbaus
       und der Robotik. Wenn ich nicht an KI arbeite, findet man mich meistens beim Zeichnen.

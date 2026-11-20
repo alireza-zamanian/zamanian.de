@@ -490,7 +490,7 @@ a:hover {
 }
 .proof {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(48px, 7vw, 88px);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -1167,16 +1167,6 @@ mark.todo {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1020px) {
-  .proof {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .proof li:nth-child(3) {
-    padding-left: 0;
-    border-left: 0;
-  }
-  .proof li:nth-child(n + 3) {
-    border-top: 1px solid var(--rule);
-  }
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

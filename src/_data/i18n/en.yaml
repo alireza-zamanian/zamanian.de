@@ -6,7 +6,7 @@ meta:
     Independent AI engineer and consultant in Munich with a PhD in Computer Science (TUM).
     AI strategy, AI-powered software and data analysis, from first idea to production.
 
-tagline: AI and Software Development · Munich
+tagline: AI and Software Consulting · Munich
 
 ui:
   skip: Skip to content
@@ -36,7 +36,6 @@ proof:
   - PhD in Computer Science, TUM
   - AI Team Lead at SYNLAB International
   - (Past) Research at Fraunhofer IKS & Helmholtz Munich
-  - Published in Statistics in Medicine & JMLR
 
 services:
   label: Services
@@ -99,10 +98,10 @@ approach:
       meta: Free · 30 min
       text: We talk about your challenge and whether I'm the right fit. No obligation.
     - name: Workshop
-      meta: Fixed price
+      meta: Fixed price per quote
       text: A focused half-day or full-day session on your use cases. You get a prioritized, written roadmap.
     - name: Solution design
-      meta: Fixed price
+      meta: Fixed price per quote
       text: Architecture, feasibility check, effort and cost estimate. A solid basis for your decision.
     - name: Build & support
       meta: Day rate
@@ -113,16 +112,14 @@ about:
   title: Hi, I'm Alireza.
   paragraphs:
     - >-
-      I'm an AI engineer in Munich. I lead an AI development team at SYNLAB, one of Europe's
+      I lead an AI development team at SYNLAB International, one of Europe's
       largest medical diagnostics providers.
     - >-
       Before that, I spent five years in applied research at Fraunhofer IKS and Helmholtz Munich,
-      and did my PhD in Computer Science at TUM on making medical AI trustworthy. My work on
-      missing data, explainability and causal inference has appeared in JMLR and Statistics in
-      Medicine, among others.
+      and did my PhD in Computer Science at TUM on trustworthy AI in medical domain.
     - >-
       I started out as a data scientist in industry, after studying mechanical and robotics
-      engineering. When I'm not working on AI, you'll probably find me sketching.
+      engineering. When I'm not working, you'll probably find me reading or sketching.
   facts:
     - label: Based in
       value: Munich, Germany
