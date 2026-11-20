@@ -1,0 +1,203 @@
+# English texts. de.yaml mirrors this structure; keep both in sync.
+
+meta:
+  title: Alireza Zamanian · AI Engineer & Consultant in Munich
+  description: >-
+    Independent AI engineer and consultant in Munich with a PhD in Computer Science (TUM).
+    AI strategy, AI-powered software and data analysis, from first idea to production.
+
+tagline: AI and Software Development · Munich
+
+ui:
+  skip: Skip to content
+  menu: Main navigation
+  language: Language
+  theme: Switch between light and dark mode
+  newTab: opens in a new tab
+
+nav:
+  services: Services
+  projects: Projects
+  approach: Process
+  about: About
+  contact: Contact
+  cv: CV
+
+hero:
+  title: AI that works <em>beyond the demo</em>.
+  lead: >-
+    I help companies find the AI use cases that matter, design solutions that hold up, and build
+    them, with the rigor of a scientist and the pragmatism of an engineer.
+  primary: Book a free intro call
+  secondary: View CV
+  languageNote: ""
+
+proof:
+  - PhD in Computer Science, TUM
+  - AI Team Lead at SYNLAB International
+  - (Past) Research at Fraunhofer IKS & Helmholtz Munich
+  - Published in Statistics in Medicine & JMLR
+
+services:
+  label: Services
+  title: How I can help
+  items:
+    - title: AI strategy & adoption
+      summary: >-
+        Find out where AI, including AI agents, creates real value in your organization, and
+        introduce it safely.
+      points:
+        - Use-case discovery and prioritization
+        - AI and agent strategy, roadmap, build vs. buy
+        - Governance, risk and EU AI Act readiness
+        - Workshops and enablement for your teams
+    - title: AI-powered software
+      summary: >-
+        Bring me a digitalization challenge. I design the AI solution and, if you like, build it
+        with you.
+      points:
+        - "Solution architecture: LLMs, RAG, agents, classic ML"
+        - Prototypes and proofs of concept
+        - Production-ready implementation, e.g. on Azure
+        - Integration with your existing systems and processes
+    - title: Data analysis & statistics
+      summary: Reliable answers from your data, with methods that stand up to scrutiny.
+      points:
+        - Statistical analysis and modeling
+        - Incomplete and messy data
+        - Causal questions, study and experiment design
+        - Forecasting, time series and predictive models
+
+projects:
+  label: Projects
+  title: Selected work
+
+why:
+  label: Strengths
+  title: Why work with me
+  items:
+    - title: Science meets engineering
+      text: >-
+        A PhD in trustworthy AI and years of shipping production software. I know the methods,
+        and how to make them work in practice.
+    - title: Proven where it matters
+      text: >-
+        I build AI for healthcare, where data quality, safety and compliance are not optional.
+        That discipline pays off in any industry.
+    - title: From prototype to product
+      text: >-
+        I lead an AI development team, so I know what it takes to turn a promising PoC into a
+        system people rely on.
+    - title: Honest advice
+      text: I'm not a one-trick pony! If AI is not the right answer to your problem, you will hear it and the right suggestion from me.
+
+approach:
+  label: Process
+  title: Start small, decide with confidence
+  steps:
+    - name: Intro call
+      meta: Free · 30 min
+      text: We talk about your challenge and whether I'm the right fit. No obligation.
+    - name: Workshop
+      meta: Fixed price
+      text: A focused half-day or full-day session on your use cases. You get a prioritized, written roadmap.
+    - name: Solution design
+      meta: Fixed price
+      text: Architecture, feasibility check, effort and cost estimate. A solid basis for your decision.
+    - name: Build & support
+      meta: Day rate
+      text: I implement the solution, alone or with your team, from prototype to production. Ongoing advice if you need it.
+
+about:
+  label: About
+  title: Hi, I'm Alireza.
+  paragraphs:
+    - >-
+      I'm an AI engineer in Munich. I lead an AI development team at SYNLAB, one of Europe's
+      largest medical diagnostics providers.
+    - >-
+      Before that, I spent five years in applied research at Fraunhofer IKS and Helmholtz Munich,
+      and did my PhD in Computer Science at TUM on making medical AI trustworthy. My work on
+      missing data, explainability and causal inference has appeared in JMLR and Statistics in
+      Medicine, among others.
+    - >-
+      I started out as a data scientist in industry, after studying mechanical and robotics
+      engineering. When I'm not working on AI, you'll probably find me sketching.
+  facts:
+    - label: Based in
+      value: Munich, Germany
+    - label: Working language
+      value: English
+    - label: Work mode
+      value: Remote, or on-site around Munich
+    - label: Languages
+      value: English, German (B1), Persian
+
+background:
+  label: Background
+  title: Experience & research
+  experience: Experience
+  publications: Selected publications
+  cv: Full CV
+  scholar: All publications on Google Scholar
+  present: today
+
+faq:
+  label: FAQ
+  title: Common questions
+  items:
+    - q: Do you work in German?
+      a: >-
+        Meetings, workshops and documents are in English. My German is at B1 level, so I can
+        follow German material, but English lets us work precisely and efficiently.
+    - q: Do you work remotely or on-site?
+      a: Both. I work remotely with clients across Germany and Europe, and on-site in and around Munich.
+    - q: How do you handle confidential data?
+      a: >-
+        With care. I'm used to working with sensitive medical data. I'm happy to sign an NDA, and
+        I handle personal data in line with the GDPR.
+    - q: What does it cost?
+      a: >-
+        The intro call is free. Workshops and solution designs have a fixed price; implementation
+        is billed by the day. You always get a written proposal before any work starts.
+
+contact:
+  label: Contact
+  title: Let's talk about your project.
+  text: Tell me briefly what you're working on. I usually reply within one business day.
+  book: Book a free intro call
+  email: Write an email
+  mailSubject: Intro call
+  note: ""
+  conflict: Projects in or close to medical laboratory diagnostics are subject to a short conflict-of-interest check with my current employer.
+  next:
+    title: What happens next
+    steps:
+      - Pick a time for a free 30-minute video call.
+      - We discuss your challenge and possible approaches.
+      - If it's a good fit, you get a written proposal with scope and price.
+
+footer:
+  imprint: Legal notice
+  privacy: Privacy
+  cv: CV
+
+cv:
+  metaTitle: CV · Alireza Zamanian
+  metaDescription: >-
+    CV of Alireza Zamanian, AI engineer and consultant in Munich with a PhD in Computer Science (TUM).
+  print: Save as PDF
+  back: Homepage
+  profile: Profile
+  experience: Experience
+  education: Education
+  skills: Skills
+  languages: Languages
+  publications: Publications
+  fullList: Full list of publications
+  present: today
+
+notFound:
+  title: Page not found
+  text: The page you're looking for doesn't exist (anymore).
+  home: Go to the homepage

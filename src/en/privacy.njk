@@ -1,0 +1,45 @@
+---
+layout: layouts/page.njk
+pageKey: privacy
+permalink: /privacy/
+title: Privacy policy · Alireza Zamanian
+---
+{%- from "partials/macros.njk" import val %}
+{%- set booking = site.legal.bookingProvider %}
+<h1>Privacy policy</h1>
+<p class="meta">Last updated: {{ site.legal.privacyUpdated | monthYearLong("en") }}</p>
+<p class="note">This is an English translation of the <a href="/de/datenschutz/" lang="de">Datenschutzerklärung</a>. The German version is legally binding.</p>
+
+<h2>1. Controller</h2>
+<p>The controller responsible for processing personal data on this website is:</p>
+<p>
+  {{ site.name }}<br>
+  {{ val(site.legal.street) }}<br>
+  {{ val(site.legal.postcode) }} {{ site.legal.city }}<br>
+  {{ site.legal.country.en }}<br>
+  Email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+</p>
+
+<h2>2. In short</h2>
+<p>This website uses no cookies, no analytics or tracking tools, and loads no third-party content. Fonts and all other files are served directly from this website. I only process personal data where this is necessary to provide the website or to handle your request.</p>
+
+<h2>3. Hosting and server log files</h2>
+<p>This website is served via GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you visit the website, GitHub stores your IP address for security purposes. Technically necessary access data is also processed, such as the date and time of access, the page requested, the referring page, and information about your browser and operating system.</p>
+<p>The legal basis is Art. 6(1)(f) GDPR. My legitimate interest is to provide this website securely, reliably and efficiently. Data may be transferred to the USA. GitHub is certified under the EU-U.S. Data Privacy Framework; the transfer is based on the European Commission's adequacy decision (Art. 45 GDPR). For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+
+<h2>4. Contacting me by email</h2>
+<p>If you email me, I process the information you provide (e.g. your name, email address and the content of your message) to handle your request. The legal basis is Art. 6(1)(b) GDPR where your request relates to entering into or performing a contract, and otherwise Art. 6(1)(f) GDPR (legitimate interest in answering enquiries). I delete your data once it is no longer needed for this purpose, unless statutory retention obligations apply.</p>
+
+<h2>5. Booking appointments</h2>
+{%- if booking.name %}
+<p>To schedule appointments, I link to the online scheduling service {{ booking.name }} ({{ booking.address }}). No data is transferred until you follow the link. If you book an appointment, {{ booking.name }} processes the data you enter (e.g. name, email address, selected time and, if provided, your message) on my behalf so that we can arrange and hold the meeting. The legal basis is Art. 6(1)(b) GDPR. For details, see the <a href="{{ booking.privacyUrl.en }}">privacy policy of {{ booking.name }}</a>.</p>
+{%- else %}
+<p>Appointments are currently arranged by email; section 4 applies.</p>
+{%- endif %}
+
+<h2>6. Links to other websites</h2>
+<p>This website links to external services such as LinkedIn, Google Scholar and academic publishers. No data is transferred until you click such a link; from then on, the respective provider's privacy policy applies.</p>
+
+<h2>7. Your rights</h2>
+<p>You have the right to access (Art. 15 GDPR), rectification (Art. 16 GDPR), erasure (Art. 17 GDPR), restriction of processing (Art. 18 GDPR) and data portability (Art. 20 GDPR). Where processing is based on Art. 6(1)(f) GDPR, you may object to it on grounds relating to your particular situation (Art. 21 GDPR). An informal email is enough.</p>
+<p>You also have the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR). The authority responsible for me is the Bavarian State Office for Data Protection Supervision (BayLDA), Promenade 18, 91522 Ansbach, Germany, <a href="https://www.lda.bayern.de">www.lda.bayern.de</a>.</p>

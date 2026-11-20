@@ -1,0 +1,212 @@
+# Deutsche Texte. Gleiche Struktur wie en.yaml – beide Dateien synchron halten.
+
+meta:
+  title: Alireza Zamanian · KI-Entwicklung & Beratung in München
+  description: >-
+    Unabhängiger KI-Ingenieur und Berater in München mit Promotion in Informatik (TUM).
+    KI-Strategie, KI-gestützte Software und Datenanalyse – von der ersten Idee bis zum
+    produktiven Einsatz.
+
+tagline: KI- und Softwareentwicklung · München
+
+ui:
+  skip: Zum Inhalt springen
+  menu: Hauptnavigation
+  language: Sprache
+  theme: Zwischen hellem und dunklem Design wechseln
+  newTab: öffnet in neuem Tab
+
+nav:
+  services: Leistungen
+  projects: Projekte
+  approach: Ablauf
+  about: Über mich
+  contact: Kontakt
+  cv: Lebenslauf
+
+hero:
+  title: KI, die nicht nur <em>in der Demo</em> überzeugt.
+  lead: >-
+    Ich helfe Unternehmen, die KI-Anwendungsfälle zu finden, die wirklich zählen, tragfähige
+    Lösungen zu entwerfen und sie umzusetzen – mit wissenschaftlicher Gründlichkeit und dem
+    Pragmatismus eines Ingenieurs.
+  primary: Kostenloses Erstgespräch buchen
+  secondary: Lebenslauf ansehen
+  languageNote: Beratung und Zusammenarbeit derzeit auf Englisch.
+
+proof:
+  - Promotion in Informatik, TUM
+  - KI-Teamleiter bei SYNLAB International
+  - (ehemals) Forschung bei Fraunhofer IKS & Helmholtz Munich
+  - Publikationen u. a. in Statistics in Medicine & JMLR
+
+services:
+  label: Leistungen
+  title: Wobei ich Sie unterstütze
+  items:
+    - title: KI-Strategie & -Einführung
+      summary: >-
+        Finden Sie heraus, wo KI – einschließlich KI-Agenten – in Ihrem Unternehmen echten
+        Nutzen stiftet, und führen Sie sie sicher ein.
+      points:
+        - Identifikation und Priorisierung von Anwendungsfällen
+        - KI- und Agenten-Strategie, Roadmap, Make-or-Buy
+        - Governance, Risiken und Vorbereitung auf den EU AI Act
+        - Workshops und Befähigung Ihrer Teams
+    - title: KI-gestützte Software
+      summary: >-
+        Sie stehen vor einer Digitalisierungsaufgabe? Ich entwerfe die KI-Lösung und setze sie
+        auf Wunsch gemeinsam mit Ihnen um.
+      points:
+        - "Lösungsarchitektur: LLMs, RAG, Agenten, klassisches ML"
+        - Prototypen und Proofs of Concept
+        - Produktionsreife Umsetzung, z. B. auf Azure
+        - Integration in Ihre bestehenden Systeme und Prozesse
+    - title: Datenanalyse & Statistik
+      summary: Belastbare Antworten aus Ihren Daten – mit Methoden, die einer kritischen Prüfung standhalten.
+      points:
+        - Statistische Analyse und Modellierung
+        - Unvollständige und unsaubere Daten
+        - Kausale Fragestellungen, Studien- und Versuchsdesign
+        - Prognosen, Zeitreihen und Vorhersagemodelle
+
+projects:
+  label: Projekte
+  title: Ausgewählte Projekte
+
+why:
+  label: Stärken
+  title: Was mich auszeichnet
+  items:
+    - title: Wissenschaft trifft Engineering
+      text: >-
+        Eine Promotion zu vertrauenswürdiger KI und jahrelange Erfahrung mit produktiver Software.
+        Ich kenne die Methoden – und weiß, wie man sie in der Praxis zum Laufen bringt.
+    - title: Bewährt, wo es darauf ankommt
+      text: >-
+        Ich entwickle KI für das Gesundheitswesen, wo Datenqualität, Sicherheit und Compliance
+        Pflicht sind. Diese Sorgfalt zahlt sich in jeder Branche aus.
+    - title: Vom Prototyp zum Produkt
+      text: >-
+        Ich leite ein KI-Entwicklungsteam und weiß, was es braucht, damit aus einer
+        vielversprechenden Demo ein verlässliches System wird.
+    - title: Ehrliche Beratung
+      text: >-
+        Ich habe mehr als nur einen Hammer im Werkzeugkasten! Wenn KI nicht die richtige Antwort
+        auf Ihr Problem ist, sage ich es Ihnen – und schlage vor, was besser passt.
+
+approach:
+  label: Ablauf
+  title: Klein anfangen, sicher entscheiden
+  steps:
+    - name: Erstgespräch
+      meta: Kostenlos · 30 Min.
+      text: Wir sprechen über Ihre Herausforderung und darüber, ob ich der Richtige dafür bin. Unverbindlich.
+    - name: Workshop
+      meta: Festpreis
+      text: Eine fokussierte Sitzung (halber oder ganzer Tag) zu Ihren Anwendungsfällen. Sie erhalten eine priorisierte, schriftliche Roadmap.
+    - name: Lösungskonzept
+      meta: Festpreis
+      text: Architektur, Machbarkeitsprüfung sowie Aufwands- und Kostenschätzung – eine solide Grundlage für Ihre Entscheidung.
+    - name: Umsetzung & Begleitung
+      meta: Tagessatz
+      text: Ich setze die Lösung um, allein oder mit Ihrem Team, vom Prototyp bis zum produktiven Einsatz. Auf Wunsch mit laufender Beratung.
+  note: Jede Zusammenarbeit beginnt mit einem schriftlichen Angebot, das Umfang und Preis klar festlegt.
+
+about:
+  label: Über mich
+  title: Hallo, ich bin Alireza.
+  paragraphs:
+    - >-
+      Ich bin KI-Ingenieur in München und leite ein KI-Entwicklungsteam bei SYNLAB, einem der
+      größten Anbieter medizinischer Labordiagnostik in Europa.
+    - >-
+      Zuvor habe ich fünf Jahre in der angewandten Forschung bei Fraunhofer IKS und Helmholtz
+      Munich gearbeitet und an der TUM in Informatik promoviert – zum Thema vertrauenswürdige KI
+      in der Medizin. Meine Arbeiten zu fehlenden Daten, Erklärbarkeit und kausaler Inferenz sind
+      unter anderem in JMLR und Statistics in Medicine erschienen.
+    - >-
+      Angefangen habe ich als Data Scientist in der Industrie, nach einem Studium des Maschinenbaus
+      und der Robotik. Wenn ich nicht an KI arbeite, findet man mich meistens beim Zeichnen.
+  facts:
+    - label: Standort
+      value: München
+    - label: Arbeitssprache
+      value: Englisch
+    - label: Arbeitsweise
+      value: Remote oder vor Ort im Raum München
+    - label: Sprachen
+      value: Englisch, Deutsch (B1), Persisch
+
+background:
+  label: Werdegang
+  title: Erfahrung & Forschung
+  experience: Berufserfahrung
+  publications: Ausgewählte Publikationen
+  cv: Vollständiger Lebenslauf
+  scholar: Alle Publikationen auf Google Scholar
+  present: heute
+
+faq:
+  label: FAQ
+  title: Häufige Fragen
+  items:
+    - q: Arbeiten Sie auch auf Deutsch?
+      a: >-
+        Besprechungen, Workshops und Unterlagen sind auf Englisch. Mein Deutsch liegt auf
+        B1-Niveau: Deutschsprachige Unterlagen kann ich nachvollziehen, auf Englisch arbeiten wir
+        aber präziser und effizienter. Schreiben Sie mir gern auf Deutsch – ich antworte auf Englisch.
+    - q: Arbeiten Sie remote oder vor Ort?
+      a: Beides. Remote mit Kunden in ganz Deutschland und Europa, vor Ort in München und Umgebung.
+    - q: Wie gehen Sie mit vertraulichen Daten um?
+      a: >-
+        Sorgfältig – ich bin den Umgang mit sensiblen medizinischen Daten gewohnt. Eine
+        Vertraulichkeitsvereinbarung (NDA) unterschreibe ich gern, und personenbezogene Daten
+        verarbeite ich DSGVO-konform.
+    - q: Was kostet die Zusammenarbeit?
+      a: >-
+        Das Erstgespräch ist kostenlos. Workshops und Lösungskonzepte biete ich zum Festpreis an,
+        die Umsetzung rechne ich nach Tagessatz ab. Vor Beginn erhalten Sie immer ein
+        schriftliches Angebot.
+
+contact:
+  label: Kontakt
+  title: Lassen Sie uns über Ihr Projekt sprechen.
+  text: Schreiben Sie mir kurz, woran Sie arbeiten. In der Regel antworte ich innerhalb eines Werktags.
+  book: Erstgespräch buchen
+  email: E-Mail schreiben
+  mailSubject: Erstgespräch
+  note: Sie können mir gern auf Deutsch schreiben. Gespräche führen wir auf Englisch.
+  conflict: Projekte im Bereich der medizinischen Labordiagnostik oder in dessen Nähe stimme ich vorab kurz mit meinem aktuellen Arbeitgeber ab.
+  next:
+    title: So geht es weiter
+    steps:
+      - Sie wählen einen Termin für ein kostenloses, 30-minütiges Videogespräch.
+      - Wir besprechen Ihre Herausforderung und mögliche Lösungswege.
+      - Wenn es passt, erhalten Sie ein schriftliches Angebot mit Umfang und Preis.
+
+footer:
+  imprint: Impressum
+  privacy: Datenschutz
+  cv: Lebenslauf
+
+cv:
+  metaTitle: Lebenslauf · Alireza Zamanian
+  metaDescription: >-
+    Lebenslauf von Alireza Zamanian, KI-Ingenieur und Berater in München mit Promotion in
+    Informatik (TUM).
+  print: Als PDF speichern
+  back: Startseite
+  profile: Profil
+  experience: Berufserfahrung
+  education: Ausbildung
+  skills: Kenntnisse
+  languages: Sprachen
+  publications: Publikationen
+  fullList: Vollständige Publikationsliste
+  present: heute
+
+notFound:
+  title: Seite nicht gefunden
+  text: Die gesuchte Seite existiert nicht (mehr).
+  home: Zur Startseite

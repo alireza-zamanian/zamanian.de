@@ -1,0 +1,31 @@
+---
+layout: layouts/page.njk
+pageKey: imprint
+permalink: /legal-notice/
+title: Legal notice · Alireza Zamanian
+---
+{%- from "partials/macros.njk" import val %}
+<h1>Legal notice</h1>
+<p class="note">This is an English translation of the <a href="/de/impressum/" lang="de">Impressum</a>. The German version is legally binding.</p>
+
+<h2>Information pursuant to § 5 DDG (German Digital Services Act)</h2>
+<p>
+  {{ site.name }}<br>
+  {{ val(site.legal.businessName.en) }}<br>
+  {{ val(site.legal.street) }}<br>
+  {{ val(site.legal.postcode) }} {{ site.legal.city }}<br>
+  {{ site.legal.country.en }}
+</p>
+
+<h2>Contact</h2>
+<p>
+  {%- if site.legal.phone %}
+  Phone: {{ site.legal.phone }}<br>
+  {%- endif %}
+  Email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+</p>
+{%- if site.legal.vatId %}
+
+<h2>VAT identification number</h2>
+<p>VAT identification number pursuant to § 27a of the German VAT Act (UStG): {{ site.legal.vatId }}</p>
+{%- endif %}

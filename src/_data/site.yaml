@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────
+#  Site settings: who you are and how clients reach you.
+#  Page texts live in i18n/en.yaml and i18n/de.yaml,
+#  CV facts (experience, education, publications) in cv.yaml.
+# ─────────────────────────────────────────────────────────────
+
+name: Alireza Zamanian
+initials: AZ
+domain: zamanian.de
+locales: [en, de]
+
+title:
+  en: AI Engineer & Consultant
+  de: KI-Ingenieur & Berater
+
+location:
+  en: Munich, Germany
+  de: München
+
+contact:
+  # Zoho Mail alias of alireza@zamanian.de.
+  email: contact@zamanian.de
+  # Zeeg booking page (free 30-min intro call). If emptied, "Book a call" opens an email instead.
+  bookingUrl: https://zeeg.me/zamanian/technical-consultation
+  linkedin: https://www.linkedin.com/in/alireza-zamanian-384431102
+  scholar: https://scholar.google.com/citations?user=NDlpy9oAAAAJ
+
+# Optional portrait. Put the file in src/assets/img/ and set e.g. /assets/img/portrait.jpg
+photo: ""
+
+# Hero graphic: density (dithered blobs in a window) | histogram (window) | network (no window) | strip (full width, no window)
+heroArt: network
+
+# Small status line above the hero headline. Switch on/off with showAvailability.
+showAvailability: false
+availability:
+  en: Taking on a limited number of projects
+  de: Freie Kapazität für ausgewählte Projekte
+
+# ── Legal details (Impressum / Legal notice). Required in Germany before going live. ──
+legal:
+  # Descriptive designation (no registered company name, so it may be translated).
+  businessName:
+    en: AI and Software Consulting
+    de: KI- und Softwareentwicklung
+  street: Stiftsbogen 71
+  postcode: "81375"
+  city: München
+  country:
+    en: Germany
+    de: Deutschland
+  # Optional. Not legally required (CJEU C-649/17) as long as email + another fast channel exist.
+  phone: ""
+  vatId: DE461329222
+  # Shown in the privacy policy. Update when the text changes.
+  privacyUpdated: 2026-11
+  # Booking tool, shown in the privacy policy.
+  bookingProvider:
+    name: Zeeg GmbH
+    address: Friedrichstraße 155, 10117 Berlin
+    privacyUrl:
+      en: https://zeeg.me/en/legal/privacy
+      de: https://zeeg.me/de/legal/privacy

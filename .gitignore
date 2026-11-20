@@ -1,0 +1,25 @@
+# Private working notes — never publish (this repo is public for GitHub Pages)
+.workbench/
+
+# Build output (GitHub Actions builds and deploys it; never commit it)
+_site/
+
+# Dependencies
+node_modules/
+
+# Caches and logs
+.cache/
+*.log
+npm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.zed/

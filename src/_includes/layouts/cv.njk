@@ -1,0 +1,107 @@
+---
+layout: layouts/base.njk
+---
+{%- set t = i18n[locale] -%}
+<article class="container cv">
+  <header class="cv-head">
+    <div>
+      <h1>{{ site.name }}</h1>
+      <p class="cv-headline">{{ cv.headline | pick(locale) }}</p>
+      <ul class="cv-contact">
+        <li>{{ site.location | pick(locale) }}</li>
+        <li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+        <li><a href="{{ build.siteUrl }}/">{{ site.domain }}</a></li>
+        <li><a href="{{ site.contact.linkedin }}" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a></li>
+        <li><a href="{{ site.contact.scholar }}" rel="noopener" target="_blank">Google Scholar<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a></li>
+      </ul>
+    </div>
+    <button class="btn btn-line btn-sm print-btn" type="button" data-print>{{ t.cv.print }} <span aria-hidden="true">↓</span></button>
+  </header>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.profile }}</h2>
+    <div><p class="cv-summary">{{ cv.summary | pick(locale) }}</p></div>
+  </section>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.experience }}</h2>
+    <div>
+      {%- for job in cv.experience %}
+      <div class="cv-item">
+        {%- for role in job.roles %}
+        <div class="cv-row">
+          <h3>{{ role.title | pick(locale) }}</h3>
+          <span class="when">{% if role.period %}{{ role.period | pick(locale) }}{% else %}{{ role.start | monthYear(locale) }} – {{ (role.end | monthYear(locale)) if role.end else t.cv.present }}{% endif %}</span>
+        </div>
+        {%- endfor %}
+        <p class="cv-org">{{ job.org }}{% if job.location %}, {{ job.location | pick(locale) }}{% endif %}</p>
+        {%- if job.text %}
+        <p class="cv-text">{{ job.text | pick(locale) }}</p>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.education }}</h2>
+    <div>
+      {%- for edu in cv.education %}
+      <div class="cv-item">
+        <div class="cv-row">
+          <h3>{{ edu.degree | pick(locale) }}</h3>
+          <span class="when">{{ edu.start }} – {{ edu.end }}</span>
+        </div>
+        <p class="cv-org">{{ edu.school | pick(locale) }}</p>
+        {%- if edu.note %}
+        <p class="cv-text">{{ edu.note | pick(locale) }}</p>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.skills }}</h2>
+    <dl class="cv-list">
+      {%- for skill in cv.skills %}
+      <div>
+        <dt>{{ skill.area | pick(locale) }}</dt>
+        <dd>{{ skill.items | pick(locale) }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </section>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.languages }}</h2>
+    <dl class="cv-list cv-langs">
+      {%- for lang in cv.languages %}
+      <div>
+        <dt>{{ lang.name | pick(locale) }}</dt>
+        <dd>{{ lang.level | pick(locale) }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </section>
+
+  <section class="cv-section">
+    <h2>{{ t.cv.publications }}</h2>
+    <div>
+    <ol class="cv-pubs">
+      {%- for pub in cv.publications %}
+      <li{% if not pub.selected %} class="pub-more"{% endif %}>
+        {%- if pub.url %}
+        <a class="pub-title" href="{{ pub.url }}" rel="noopener" target="_blank">{{ pub.title }}<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a>
+        {%- else %}
+        <span class="pub-title">{{ pub.title }}</span>
+        {%- endif %}
+        <span class="authors">{{ pub.authors | replace("A. Zamanian", "<strong>A. Zamanian</strong>") | safe }}</span>
+        <span class="venue">{{ pub.venue }} · {{ pub.year }}</span>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p class="print-only cv-pubs-note">{{ t.cv.fullList }}: scholar.google.com/citations?user={{ site.contact.scholar | replace("https://scholar.google.com/citations?user=", "") }}</p>
+    </div>
+  </section>
+</article>

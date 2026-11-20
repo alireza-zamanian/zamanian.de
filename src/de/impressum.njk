@@ -1,0 +1,30 @@
+---
+layout: layouts/page.njk
+pageKey: imprint
+permalink: /de/impressum/
+title: Impressum · Alireza Zamanian
+---
+{%- from "partials/macros.njk" import val %}
+<h1>Impressum</h1>
+
+<h2>Angaben gemäß § 5 DDG</h2>
+<p>
+  {{ site.name }}<br>
+  {{ val(site.legal.businessName.de) }}<br>
+  {{ val(site.legal.street) }}<br>
+  {{ val(site.legal.postcode) }} {{ site.legal.city }}<br>
+  {{ site.legal.country.de }}
+</p>
+
+<h2>Kontakt</h2>
+<p>
+  {%- if site.legal.phone %}
+  Telefon: {{ site.legal.phone }}<br>
+  {%- endif %}
+  E-Mail: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+</p>
+{%- if site.legal.vatId %}
+
+<h2>Umsatzsteuer-Identifikationsnummer</h2>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {{ site.legal.vatId }}</p>
+{%- endif %}

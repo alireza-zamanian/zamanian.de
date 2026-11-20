@@ -1,0 +1,18 @@
+{
+  "name": "zamanian-de",
+  "private": true,
+  "type": "module",
+  "description": "Freelance website of Alireza Zamanian (zamanian.de)",
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8",
+    "js-yaml": "4.3.2"
+  }
+}

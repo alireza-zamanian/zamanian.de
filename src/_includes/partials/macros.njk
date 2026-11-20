@@ -1,0 +1,4 @@
+{#- Highlights unfilled placeholders such as "[PLZ]" so they are easy to spot. -#}
+{% macro val(v) -%}
+{%- if v and (v | string | first) == "[" -%}<mark class="todo">{{ v }}</mark>{%- else -%}{{ v }}{%- endif -%}
+{%- endmacro %}

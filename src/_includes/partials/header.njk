@@ -1,0 +1,35 @@
+{%- set homeUrl = collections.all | alternateUrl("home", locale) -%}
+{%- set cvUrl = collections.all | alternateUrl("cv", locale) -%}
+{%- set onHome = pageKey == "home" -%}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ homeUrl }}">
+      <span class="brand-mark" aria-hidden="true">{{ site.initials }}</span>
+      <span class="brand-name">{{ site.name }}</span>
+      <span class="brand-tagline">{{ t.tagline }}</span>
+    </a>
+    <nav class="site-nav" aria-label="{{ t.ui.menu }}">
+      <ul>
+        <li><a href="{{ '' if onHome else homeUrl }}#services">{{ t.nav.services }}</a></li>
+        <li><a href="{{ '' if onHome else homeUrl }}#projects">{{ t.nav.projects }}</a></li>
+        <li><a href="{{ '' if onHome else homeUrl }}#process">{{ t.nav.approach }}</a></li>
+        <li><a href="{{ '' if onHome else homeUrl }}#about">{{ t.nav.about }}</a></li>
+        <li><a href="{{ cvUrl }}"{% if pageKey == "cv" %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a></li>
+      </ul>
+    </nav>
+    <div class="header-tools">
+      {%- if pageKey != "404" %}
+      <nav class="lang-switch" aria-label="{{ t.ui.language }}">
+        {%- for loc in site.locales %}
+        {%- if loc == locale %}
+        <span aria-current="true">{{ loc | upper }}</span>
+        {%- else %}
+        <a href="{{ collections.all | alternateUrl(pageKey, loc) }}" hreflang="{{ loc }}" lang="{{ loc }}">{{ loc | upper }}</a>
+        {%- endif %}
+        {%- endfor %}
+      </nav>
+      {%- endif %}
+      <a class="btn" href="{{ '' if onHome else homeUrl }}#contact">{{ t.nav.contact }}</a>
+    </div>
+  </div>
+</header>

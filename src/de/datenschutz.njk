@@ -1,0 +1,44 @@
+---
+layout: layouts/page.njk
+pageKey: privacy
+permalink: /de/datenschutz/
+title: Datenschutzerklärung · Alireza Zamanian
+---
+{%- from "partials/macros.njk" import val %}
+{%- set booking = site.legal.bookingProvider %}
+<h1>Datenschutzerklärung</h1>
+<p class="meta">Stand: {{ site.legal.privacyUpdated | monthYearLong("de") }}</p>
+
+<h2>1. Verantwortlicher</h2>
+<p>Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:</p>
+<p>
+  {{ site.name }}<br>
+  {{ val(site.legal.street) }}<br>
+  {{ val(site.legal.postcode) }} {{ site.legal.city }}<br>
+  {{ site.legal.country.de }}<br>
+  E-Mail: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+</p>
+
+<h2>2. Das Wichtigste in Kürze</h2>
+<p>Diese Website verwendet keine Cookies, keine Analyse- oder Tracking-Werkzeuge und lädt keine Inhalte von Drittanbietern. Schriftarten und alle übrigen Dateien werden direkt von dieser Website geladen. Personenbezogene Daten verarbeite ich nur, soweit dies für die Bereitstellung der Website oder die Bearbeitung Ihrer Anfrage erforderlich ist.</p>
+
+<h2>3. Hosting und Server-Logfiles</h2>
+<p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website speichert GitHub Ihre IP-Adresse aus Sicherheitsgründen. Außerdem fallen technisch notwendige Zugriffsdaten an, etwa Datum und Uhrzeit des Abrufs, die aufgerufene Seite, die zuvor besuchte Seite (Referrer) sowie Angaben zu Browser und Betriebssystem.</p>
+<p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in einer sicheren, stabilen und effizienten Bereitstellung dieser Website. Dabei können Daten in die USA übermittelt werden. GitHub ist unter dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der Europäischen Kommission (Art. 45 DSGVO). Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+
+<h2>4. Kontaktaufnahme per E-Mail</h2>
+<p>Wenn Sie mir eine E-Mail schreiben, verarbeite ich die von Ihnen übermittelten Angaben (z. B. Name, E-Mail-Adresse und Inhalt Ihrer Nachricht), um Ihre Anfrage zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Ich lösche Ihre Daten, sobald sie für diesen Zweck nicht mehr erforderlich sind, es sei denn, gesetzliche Aufbewahrungspflichten stehen dem entgegen.</p>
+
+<h2>5. Terminbuchung</h2>
+{%- if booking.name %}
+<p>Für die Vereinbarung von Terminen verlinke ich auf den Online-Terminplaner {{ booking.name }} ({{ booking.address }}). Daten werden erst übertragen, wenn Sie dem Link folgen. Wenn Sie einen Termin buchen, verarbeitet {{ booking.name }} in meinem Auftrag die von Ihnen eingegebenen Daten (z. B. Name, E-Mail-Adresse, gewählter Termin und ggf. Ihre Nachricht), damit wir den Termin vereinbaren und durchführen können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Näheres finden Sie in der <a href="{{ booking.privacyUrl.de }}">Datenschutzerklärung von {{ booking.name }}</a>.</p>
+{%- else %}
+<p>Termine vereinbaren Sie derzeit per E-Mail; es gilt Abschnitt 4.</p>
+{%- endif %}
+
+<h2>6. Links zu anderen Websites</h2>
+<p>Diese Website enthält Links zu externen Angeboten, etwa LinkedIn, Google Scholar und wissenschaftlichen Verlagen. Daten werden erst übertragen, wenn Sie einen solchen Link anklicken; ab dann gilt die Datenschutzerklärung des jeweiligen Anbieters.</p>
+
+<h2>7. Ihre Rechte</h2>
+<p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO) und Datenübertragbarkeit (Art. 20 DSGVO). Soweit eine Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, können Sie ihr aus Gründen, die sich aus Ihrer besonderen Situation ergeben, widersprechen (Art. 21 DSGVO). Eine formlose E-Mail genügt.</p>
+<p>Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für mich zuständig ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, <a href="https://www.lda.bayern.de">www.lda.bayern.de</a>.</p>

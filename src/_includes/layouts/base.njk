@@ -1,0 +1,71 @@
+{%- set t = i18n[locale] -%}
+{%- set pageMeta = t[pageKey] if (pageKey and t[pageKey] and t[pageKey].metaTitle) else {} -%}
+{%- set pageTitle = title or pageMeta.metaTitle or t.meta.title -%}
+{%- set pageDescription = description or pageMeta.metaDescription or t.meta.description -%}
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ build.siteUrl }}{{ page.url }}">
+  {%- if pageKey != "404" %}
+  {%- for loc in site.locales %}
+  <link rel="alternate" hreflang="{{ loc }}" href="{{ build.siteUrl }}{{ collections.all | alternateUrl(pageKey, loc) }}">
+  {%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ build.siteUrl }}{{ collections.all | alternateUrl(pageKey, 'en') }}">
+  {%- endif %}
+  {%- if noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f6fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d12" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ build.siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ build.siteUrl }}/assets/img/og-{{ locale }}.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="{{ 'de_DE' if locale == 'de' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/geist-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-pixel-square.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/site.js" defer></script>
+  {%- if pageKey == "home" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.name | dump | safe }},
+    "jobTitle": {{ site.title | pick(locale) | dump | safe }},
+    "description": {{ t.meta.description | dump | safe }},
+    "url": {{ (build.siteUrl + page.url) | dump | safe }},
+    "email": {{ ("mailto:" + site.contact.email) | dump | safe }},
+    "address": { "@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Technical University of Munich" },
+      { "@type": "CollegeOrUniversity", "name": "Amirkabir University of Technology" }
+    ],
+    "knowsAbout": ["Artificial intelligence", "Machine learning", "Large language models", "AI agents", "Statistics", "Data analysis"],
+    "sameAs": [{{ site.contact.linkedin | dump | safe }}, {{ site.contact.scholar | dump | safe }}]
+  }
+  </script>
+  {%- endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ t.ui.skip }}</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+{{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+</body>
+</html>

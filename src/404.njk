@@ -1,0 +1,17 @@
+---
+layout: layouts/page.njk
+pageKey: "404"
+locale: en
+permalink: /404.html
+title: Page not found · Alireza Zamanian
+noindex: true
+eleventyExcludeFromCollections: true
+---
+<div class="window not-found">
+  <div class="window-bar">error_404.log</div>
+  <div class="window-body">
+    <h1>{{ i18n.en.notFound.title }}</h1>
+    <p>{{ i18n.en.notFound.text }} <a href="/">{{ i18n.en.notFound.home }}</a></p>
+    <p lang="de">{{ i18n.de.notFound.text }} <a href="/de/">{{ i18n.de.notFound.home }}</a></p>
+  </div>
+</div>

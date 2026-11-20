@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© {{ build.year }} {{ site.name }} · {{ site.location | pick(locale) }}</p>
+    <ul class="footer-links">
+      <li><a href="{{ collections.all | alternateUrl('cv', locale) }}">{{ t.footer.cv }}</a></li>
+      <li><a href="{{ site.contact.linkedin }}" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a></li>
+      <li><a href="{{ collections.all | alternateUrl('imprint', locale) }}">{{ t.footer.imprint }}</a></li>
+      <li><a href="{{ collections.all | alternateUrl('privacy', locale) }}">{{ t.footer.privacy }}</a></li>
+    </ul>
+  </div>
+</footer>

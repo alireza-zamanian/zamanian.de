@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────
+#  Selected work, shown on the homepage in this order.
+#  Bilingual fields: { en: …, de: … }. Plain values are shared.
+#  Delete an entry to hide it; an empty file hides the section.
+# ─────────────────────────────────────────────────────────────
+
+- industry: { en: Healthcare, de: Gesundheitswesen }
+  type: { en: Lead role, de: Leitende Rolle }
+  years: { en: 2025–today, de: seit 2025 }
+  title:
+    en: AI-powered digitalization of unstructured documents
+    de: KI-gestützte Digitalisierung unstrukturierter Dokumente
+  text:
+    en: >-
+      Leading the research, development and operation of AI-powered digitalization projects that
+      turn highly unstructured documents into reliable, structured data. The data is highly
+      sensitive, so privacy, security and performance are designed in from the start.
+    de: >-
+      Leitung von Forschung, Entwicklung und Betrieb KI-gestützter Digitalisierungsprojekte, die
+      hochgradig unstrukturierte Dokumente in verlässliche, strukturierte Daten verwandeln. Die Daten
+      sind hochsensibel – Datenschutz, IT-Sicherheit und Performance sind von Anfang an mitgedacht.
+  facts:
+    - { en: 20+ people in international teams, de: 20+ Beteiligte in internationalen Teams }
+    - { en: Thousands of documents across several domains, de: Tausende Dokumente aus mehreren Fachbereichen }
+
+- industry: { en: Banking, de: Banken }
+  type: { en: Consulting · freelance, de: Beratung · freiberuflich }
+  years: 2026
+  title:
+    en: AI-powered software for regulatory work
+    de: KI-gestützte Software für regulatorische Anforderungen
+  text:
+    en: >-
+      Advised on the design of AI-powered software that supports banks with regulatory
+      requirements: where AI adds real value, how to structure the solution, and what it takes to
+      make it dependable.
+    de: >-
+      Beratung bei der Konzeption KI-gestützter Software, die Banken bei regulatorischen
+      Anforderungen unterstützt: wo KI echten Mehrwert bringt, wie die Lösung aufgebaut wird und was
+      sie verlässlich macht.
+
+- industry: { en: Medical AI, de: Medizinische KI }
+  type: { en: Research · Fraunhofer IKS, de: Forschung · Fraunhofer IKS }
+  years: 2021–2024
+  title:
+    en: Methods for trustworthy medical AI
+    de: Methoden für vertrauenswürdige medizinische KI
+  text:
+    en: >-
+      Research on making medical AI reliable: handling missing data, explaining deep time-series
+      models, and evaluating AI agents that decide which data to collect.
+    de: >-
+      Forschung dazu, wie medizinische KI verlässlich wird: Umgang mit fehlenden Daten, Erklärbarkeit
+      von Deep-Learning-Zeitreihenmodellen und die Evaluation von KI-Agenten, die entscheiden, welche
+      Daten erhoben werden.
+  facts:
+    - { en: Published in JMLR & Statistics in Medicine, de: Veröffentlicht u. a. in JMLR & Statistics in Medicine }

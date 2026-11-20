@@ -1,0 +1,278 @@
+---
+layout: layouts/base.njk
+---
+{%- set t = i18n[locale] -%}
+{%- set cvUrl = collections.all | alternateUrl("cv", locale) -%}
+{%- set mailHref = "mailto:" + site.contact.email + "?subject=" + (t.contact.mailSubject | urlencode) -%}
+{%- set bookHref = site.contact.bookingUrl or mailHref -%}
+{%- set bookAttrs = (' target="_blank" rel="noopener"' if site.contact.bookingUrl else '') -%}
+{%- set newTab = '<span class="visually-hidden"> (' + t.ui.newTab + ')</span>' if site.contact.bookingUrl else '' -%}
+{%- set availability = (site.availability | pick(locale)) if site.showAvailability else "" -%}
+
+<section class="hero">
+  <div class="container">
+    {%- if availability %}
+    <div class="hero-meta">
+      <span class="status"><span class="cursor" aria-hidden="true"></span>{{ availability }}</span>
+    </div>
+    {%- endif %}
+    <h1 class="display">{{ t.hero.title | safe }}</h1>
+    <div class="hero-body">
+      <div>
+        <p class="lead">{{ t.hero.lead }}</p>
+        <div class="actions">
+          <a class="btn" href="{{ bookHref }}"{{ bookAttrs | safe }}>{{ t.hero.primary }} <span aria-hidden="true">→</span>{{ newTab | safe }}</a>
+          <a class="btn btn-line" href="{{ cvUrl }}">{{ t.hero.secondary }}</a>
+        </div>
+        {%- if t.hero.languageNote %}
+        <p class="language-note">{{ t.hero.languageNote }}</p>
+        {%- endif %}
+      </div>
+      {%- if site.heroArt == "histogram" %}
+      <figure class="window hero-art" aria-hidden="true">
+        <div class="window-bar">histogram.bmp</div>
+        <div class="window-body"><span class="art art-histogram"></span></div>
+      </figure>
+      {%- elif site.heroArt == "network" %}
+      <figure class="hero-net" aria-hidden="true">
+        <span class="art art-net-ink"></span><span class="art art-net-fill"></span>
+      </figure>
+      {%- elif site.heroArt != "strip" %}
+      <figure class="window hero-art" aria-hidden="true">
+        <div class="window-bar">density.bmp</div>
+        <div class="window-body"><span class="dither"></span></div>
+      </figure>
+      {%- endif %}
+    </div>
+    {%- if site.heroArt == "strip" %}
+    <figure class="hero-strip" aria-hidden="true">
+      <figcaption><span>activations.log</span><span>n = 100</span></figcaption>
+      <span class="art art-strip"></span>
+    </figure>
+    {%- endif %}
+    <ul class="proof">
+      {%- for item in t.proof %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <header class="sec-head">
+      <p class="chip">{{ t.services.label }}</p>
+      <h2 id="services-title">{{ t.services.title }}</h2>
+    </header>
+    <div class="cols">
+      {%- for service in t.services.items %}
+      <article class="col">
+        <p class="idx">0{{ loop.index }}</p>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.summary }}</p>
+        <ul class="list">
+          {%- for point in service.points %}
+          <li>{{ point }}</li>
+          {%- endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- if projects and projects.length %}
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <header class="sec-head">
+      <p class="chip">{{ t.projects.label }}</p>
+      <h2 id="projects-title">{{ t.projects.title }}</h2>
+    </header>
+    <ol class="projects">
+      {%- for project in projects %}
+      <li class="project">
+        <p class="project-meta">
+          <span class="project-industry">{{ project.industry | pick(locale) }}</span>
+          <span>{{ project.type | pick(locale) }} · {{ project.years | pick(locale) }}</span>
+        </p>
+        <div>
+          <h3>{{ project.title | pick(locale) }}</h3>
+          <p>{{ project.text | pick(locale) }}</p>
+          {%- if project.facts %}
+          <ul class="tags">
+            {%- for fact in project.facts %}
+            <li>{{ fact | pick(locale) }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" id="why" aria-labelledby="why-title">
+  <div class="container split">
+    <header class="sec-head">
+      <p class="chip">{{ t.why.label }}</p>
+      <h2 id="why-title">{{ t.why.title }}</h2>
+    </header>
+    <dl class="rows">
+      {%- for item in t.why.items %}
+      <div>
+        <dt>{{ item.title }}</dt>
+        <dd>{{ item.text }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <header class="sec-head">
+      <p class="chip">{{ t.approach.label }}</p>
+      <h2 id="process-title">{{ t.approach.title }}</h2>
+    </header>
+    <ol class="steps">
+      {%- for step in t.approach.steps %}
+      <li class="step">
+        <p class="step-top"><span>0{{ loop.index }}</span><span>{{ step.meta }}</span></p>
+        <h3>{{ step.name }}</h3>
+        <p>{{ step.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p class="note">{{ t.approach.note }}</p>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container about">
+    <div class="about-text">
+      <p class="chip">{{ t.about.label }}</p>
+      <h2 id="about-title">{{ t.about.title }}</h2>
+      {%- for paragraph in t.about.paragraphs %}
+      <p>{{ paragraph }}</p>
+      {%- endfor %}
+    </div>
+    <div class="about-side">
+      {%- if site.photo %}
+      <figure class="window portrait">
+        <div class="window-bar">portrait.bmp</div>
+        <img src="{{ site.photo }}" alt="{{ site.name }}" loading="lazy" decoding="async">
+      </figure>
+      {%- endif %}
+      <div class="window">
+        <div class="window-bar">profile.txt</div>
+        <dl class="window-body facts">
+          {%- for fact in t.about.facts %}
+          <div>
+            <dt>{{ fact.label }}</dt>
+            <dd>{{ fact.value }}</dd>
+          </div>
+          {%- endfor %}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="background" aria-labelledby="background-title">
+  <div class="container">
+    <header class="sec-head">
+      <p class="chip">{{ t.background.label }}</p>
+      <h2 id="background-title">{{ t.background.title }}</h2>
+    </header>
+    <div class="columns">
+      <div>
+        <h3 class="col-title">{{ t.background.experience }}</h3>
+        <ol class="timeline">
+          {%- for row in cv.experience | timeline(locale, t.background.present) %}
+          <li>
+            <span class="when">{{ row.when }}</span>
+            <span><strong class="role">{{ row.title }}</strong><span class="org">{{ row.orgs | join(" · ") }}</span></span>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+      <div>
+        <h3 class="col-title">{{ t.background.publications }}</h3>
+        <ol class="pubs">
+          {%- for pub in cv.publications | selected %}
+          <li>
+            {%- if pub.url %}
+            <a class="pub-title" href="{{ pub.url }}" rel="noopener" target="_blank">{{ pub.title }}<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a>
+            {%- else %}
+            <span class="pub-title">{{ pub.title }}</span>
+            {%- endif %}
+            <span class="venue">{{ pub.venue }} · {{ pub.year }}</span>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </div>
+    <p class="more-links">
+      <a class="btn btn-line btn-sm" href="{{ cvUrl }}">{{ t.background.cv }} <span aria-hidden="true">→</span></a>
+      <a class="btn btn-line btn-sm" href="{{ site.contact.scholar }}" rel="noopener" target="_blank">{{ t.background.scholar }} <span aria-hidden="true">↗</span><span class="visually-hidden"> ({{ t.ui.newTab }})</span></a>
+    </p>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container split">
+    <header class="sec-head">
+      <p class="chip">{{ t.faq.label }}</p>
+      <h2 id="faq-title">{{ t.faq.title }}</h2>
+    </header>
+    <div class="faq">
+      {%- for item in t.faq.items %}
+      <details>
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="edge" aria-hidden="true"></div>
+  <div class="field">
+    <div class="container contact-grid">
+      <div>
+        <p class="chip">{{ t.contact.label }}</p>
+        <h2 id="contact-title">{{ t.contact.title }}</h2>
+        <p class="contact-text">{{ t.contact.text }}</p>
+        <p class="big-links">
+          <a class="big-link" href="{{ bookHref }}"{{ bookAttrs | safe }}>{{ t.contact.book }}<span class="px" aria-hidden="true"> →</span>{{ newTab | safe }}</a>
+          <a class="big-link" href="{{ mailHref }}">{{ site.contact.email }}</a>
+        </p>
+        <ul class="contact-meta">
+          <li><a href="{{ site.contact.linkedin }}" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a></li>
+          <li><a href="{{ site.contact.scholar }}" rel="noopener" target="_blank">Google Scholar<span class="visually-hidden"> ({{ t.ui.newTab }})</span></a></li>
+          <li>{{ site.location | pick(locale) }}</li>
+        </ul>
+        {%- if t.contact.note %}
+        <p class="contact-note">{{ t.contact.note }}</p>
+        {%- endif %}
+        {%- if t.contact.conflict %}
+        <p class="contact-note"><strong>{{ t.contact.conflict }}</strong></p>
+        {%- endif %}
+      </div>
+      <div class="window">
+        <div class="window-bar">next_steps.txt</div>
+        <div class="window-body">
+          <p class="next-title">{{ t.contact.next.title }}</p>
+          <ol class="next">
+            {%- for step in t.contact.next.steps %}
+            <li>{{ step }}</li>
+            {%- endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

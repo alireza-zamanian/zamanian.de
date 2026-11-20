@@ -1,0 +1,144 @@
+# ─────────────────────────────────────────────────────────────
+#  CV facts, used on the homepage and the CV page.
+#  Bilingual fields: { en: …, de: … }. Plain strings are shared.
+#  Dates: "YYYY-MM". Leave `end` empty for current positions.
+#  Optional `period: { en, de }` on a role overrides the date text on the CV page.
+# ─────────────────────────────────────────────────────────────
+
+headline:
+  en: AI Engineer & Consultant · PhD in Computer Science
+  de: KI-Ingenieur & Berater · Promotion in Informatik
+
+summary:
+  en: >-
+    AI engineer with a PhD in Computer Science from TUM and almost ten years of experience
+    across data science, applied AI research and production AI software, much of it in healthcare.
+    Currently leading an AI development team at SYNLAB, one of Europe's largest medical
+    diagnostics providers.
+  de: >-
+    KI-Ingenieur mit Promotion in Informatik an der TUM und fast zehn Jahren Erfahrung in
+    Data Science, angewandter KI-Forschung und produktiver KI-Software, vieles davon im
+    Gesundheitswesen. Derzeit leite ich ein KI-Entwicklungsteam bei SYNLAB, einem der größten
+    Anbieter medizinischer Labordiagnostik in Europa.
+
+experience:
+  - org: SYNLAB International
+    location: { en: Munich, de: München }
+    roles:
+      - title: { en: AI Development Team Leader, de: Teamleiter KI-Entwicklung }
+        start: 2026-01
+      - title: AI Product Engineer
+        start: 2024-11
+        end: 2026-01
+
+  - org: PoriZma
+    roles:
+      - title: { en: Software & AI Consultant, de: Software- & KI-Berater }
+        start: 2026-03
+        end: 2026-06
+        period: { en: 2026 (4 months), de: 2026 (4 Monate) }
+
+  - org: Fraunhofer IKS
+    location: { en: Munich, de: München }
+    roles:
+      - title: { en: Doctoral Researcher, de: Wissenschaftlicher Mitarbeiter (Promotion) }
+        start: 2021-09
+        end: 2024-11
+
+  - org: Helmholtz Munich
+    location: { en: Munich, de: München }
+    roles:
+      - title: { en: Doctoral Researcher, de: Wissenschaftlicher Mitarbeiter (Promotion) }
+        start: 2019-09
+        end: 2021-08
+
+education:
+  - degree: { en: PhD in Computer Science, de: Promotion in Informatik }
+    school: { en: Technical University of Munich (TUM), de: Technische Universität München (TUM) }
+    start: 2019
+    end: 2026
+    note:
+      en: "Magna cum laude. Thesis: Achieving Trustworthiness in Medical AI via Domain-Informed Analysis"
+      de: "Magna cum laude. Dissertation: Achieving Trustworthiness in Medical AI via Domain-Informed Analysis"
+  - degree: { en: M.Sc. Robotics Engineering, de: M.Sc. Robotik }
+    school: Amirkabir University of Technology (Tehran Polytechnic)
+    start: 2015
+    end: 2017
+  - degree: { en: B.Sc. Mechanical Engineering, de: B.Sc. Maschinenbau }
+    school: Amirkabir University of Technology (Tehran Polytechnic)
+    start: 2009
+    end: 2014
+
+skills:
+  - area: { en: AI & machine learning, de: KI & Machine Learning }
+    items: { en: "LLMs, retrieval-augmented generation (RAG), AI agents, deep learning, time series, explainable AI", de: "LLMs, Retrieval-Augmented Generation (RAG), KI-Agenten, Deep Learning, Zeitreihen, erklärbare KI" }
+  - area: { en: Statistics & data, de: Statistik & Daten }
+    items: { en: "Statistical modeling, missing data, causal inference, sensitivity analysis, study design", de: "Statistische Modellierung, fehlende Daten, kausale Inferenz, Sensitivitätsanalyse, Studiendesign" }
+  - area: { en: Engineering, de: Engineering }
+    items: { en: "Software development, Python, Microsoft Azure, production AI systems", de: "Softwareentwicklung, Python, Microsoft Azure, produktive KI-Systeme" }
+  - area: { en: Domains, de: Branchen }
+    items: { en: "Healthcare and medical diagnostics, robotics", de: "Gesundheitswesen und medizinische Diagnostik, Robotik" }
+
+languages:
+  - name: { en: English, de: Englisch }
+    level: { en: Fluent (working language), de: Fließend (Arbeitssprache) }
+  - name: { en: Persian, de: Persisch }
+    level: { en: Native, de: Muttersprache }
+  - name: { en: German, de: Deutsch }
+    level: { en: Intermediate (B1), de: Mittelstufe (B1) }
+
+# `selected: true` → also shown on the homepage. Your name is highlighted automatically.
+publications:
+  - title: Evaluation of Active Feature Acquisition Methods for Time-varying Feature Settings
+    authors: H. von Kleist, A. Zamanian, I. Shpitser, N. Ahmidi
+    venue: Journal of Machine Learning Research 26(60)
+    year: 2025
+    url: https://www.jmlr.org/papers/v26/23-1635.html
+    selected: true
+  - title: Analysis of Missingness Scenarios for Observational Health Data
+    authors: A. Zamanian, H. von Kleist, O. A. Ciora, M. Piperno, G. Lancho, N. Ahmidi
+    venue: Journal of Personalized Medicine 14(5)
+    year: 2024
+    url: https://doi.org/10.3390/jpm14050514
+    selected: true
+  - title: "KI-Entwicklung: von der Vorschrift zum Computercode"
+    authors: A. Zamanian, E. Pachl, G. Lancho
+    venue: Medizintechnik
+    year: 2024
+    selected: true
+  - title: Assessable and Interpretable Sensitivity Analysis in the Pattern Graph Framework for Nonignorable Missingness Mechanisms
+    authors: A. Zamanian, N. Ahmidi, M. Drton
+    venue: Statistics in Medicine 42(29)
+    year: 2023
+    url: https://doi.org/10.1002/sim.9920
+    selected: true
+  - title: "What about the Latent Space? The Need for Latent Feature Saliency Detection in Deep Time Series Classification"
+    authors: M. Schröder, A. Zamanian, N. Ahmidi
+    venue: Machine Learning and Knowledge Extraction 5(2)
+    year: 2023
+    url: https://doi.org/10.3390/make5020032
+  - title: Post-hoc Saliency Methods Fail to Capture Latent Feature Importance in Time Series Data
+    authors: M. Schröder, A. Zamanian, N. Ahmidi
+    venue: Trustworthy Machine Learning for Healthcare (TML4H), Springer LNCS
+    year: 2023
+    url: https://doi.org/10.1007/978-3-031-39539-0_10
+  - title: Evaluation of Active Feature Acquisition Methods for Static Feature Settings
+    authors: H. von Kleist, A. Zamanian, I. Shpitser, N. Ahmidi
+    venue: arXiv:2312.03619
+    year: 2023
+    url: https://arxiv.org/abs/2312.03619
+  - title: Partially Specified Causal Simulations
+    authors: A. Zamanian, L. Mareis, N. Ahmidi
+    venue: arXiv:2309.10514
+    year: 2023
+    url: https://arxiv.org/abs/2309.10514
+  - title: "Early-, Late-, and Very Late-Term Prediction of Target Lesion Failure in Coronary Artery Stent Patients: An International Multi-Site Study"
+    authors: E. Pachl, A. Zamanian, M. Stieler, C. Bahr, N. Ahmidi
+    venue: Applied Sciences 11(15)
+    year: 2021
+    url: https://doi.org/10.3390/app11156986
+  - title: Estimation of Moving Obstacle Dynamics with Mobile RGB-D Camera
+    authors: S. B. Germi, A. Zamanian, M. A. Arzati, M. A. Khosravi, R. FesharakiFard
+    venue: International Conference on Robotics and Mechatronics (ICRoM)
+    year: 2017
+    url: https://doi.org/10.1109/ICRoM.2017.8466139
