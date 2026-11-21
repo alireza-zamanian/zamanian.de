@@ -40,8 +40,9 @@
   --header-h: 60px;
   color-scheme: light;
 }
+/* Dark: follows the system unless the visitor picked a theme (data-theme, set by the toggle). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #0a0d12;
     --paper-2: #131924;
     --ink: #e8edf4;
@@ -52,6 +53,17 @@
     --on-field: #0a0d12;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --paper: #0a0d12;
+  --paper-2: #131924;
+  --ink: #e8edf4;
+  --ink-2: #c1cad6;
+  --muted: #8d97a7;
+  --rule: #e8edf4;
+  --rule-soft: #283140;
+  --on-field: #0a0d12;
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -343,6 +355,27 @@ a:hover {
   text-decoration: none;
 }
 .lang-switch [aria-current] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid var(--rule);
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+.theme-toggle[hidden] {
+  display: none;
+}
+.theme-toggle svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.theme-toggle:hover {
   background: var(--ink);
   color: var(--paper);
 }
@@ -1264,7 +1297,8 @@ mark.todo {
     size: A4;
     margin: 14mm 15mm;
   }
-  :root {
+  :root,
+  :root[data-theme] {
     --paper: #ffffff;
     --paper-2: #f2f2f2;
     --ink: #0b0f16;

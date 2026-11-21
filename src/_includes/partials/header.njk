@@ -18,6 +18,9 @@
       </ul>
     </nav>
     <div class="header-tools">
+      <button class="theme-toggle" type="button" aria-label="{{ t.ui.theme }}" title="{{ t.ui.theme }}" data-theme-toggle hidden>
+        <svg viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true"><rect x="0.5" y="0.5" width="13" height="13" fill="none" stroke="currentColor"/><rect x="7" y="0" width="7" height="14" fill="currentColor"/></svg>
+      </button>
       {%- if pageKey != "404" %}
       <nav class="lang-switch" aria-label="{{ t.ui.language }}">
         {%- for loc in site.locales %}
