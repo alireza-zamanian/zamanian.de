@@ -45,13 +45,13 @@ services:
   items:
     - title: KI-Strategie & -Einführung
       summary: >-
-        Finden Sie heraus, wo KI – einschließlich KI-Agenten – in Ihrem Unternehmen echten
-        Nutzen stiftet, und führen Sie sie sicher ein.
+        Finden Sie heraus, wo KI in Ihrem Unternehmen echten Nutzen stiftet, und führen Sie sie
+        sicher ein.
       points:
         - Identifikation und Priorisierung von Anwendungsfällen
-        - KI- und Agenten-Strategie, Roadmap, Make-or-Buy
-        - Governance, Risiken und Vorbereitung auf den EU AI Act
-        - Workshops und Befähigung Ihrer Teams
+        - KI-Strategie, Roadmap, Make-or-Buy
+        - Governance, Risiken und Einsatzbereitschaft
+        - Workshops und Befähigung
     - title: KI-gestützte Software
       summary: >-
         Sie stehen vor einer Digitalisierungsaufgabe? Ich entwerfe die KI-Lösung und setze sie
@@ -59,14 +59,13 @@ services:
       points:
         - "Lösungsarchitektur: LLMs, RAG, Agenten, klassisches ML"
         - Prototypen und Proofs of Concept
-        - Produktionsreife Umsetzung, z. B. auf Azure
-        - Integration in Ihre bestehenden Systeme und Prozesse
+        - Produktionsreife Umsetzung
+        - Integration in bestehende Systeme und Prozesse
     - title: Datenanalyse & Statistik
       summary: Belastbare Antworten aus Ihren Daten – mit Methoden, die einer kritischen Prüfung standhalten.
       points:
         - Statistische Analyse und Modellierung
-        - Unvollständige und unsaubere Daten
-        - Kausale Fragestellungen, Studien- und Versuchsdesign
+        - Data Mining und Datenaufbereitung
         - Prognosen, Zeitreihen und Vorhersagemodelle
 
 projects:
@@ -83,7 +82,7 @@ why:
         Ich kenne die Methoden – und weiß, wie man sie in der Praxis zum Laufen bringt.
     - title: Bewährt, wo es darauf ankommt
       text: >-
-        Ich entwickle KI für das Gesundheitswesen, wo Datenqualität, Sicherheit und Compliance
+        Ich entwickle KI für das Gesundheitswesen, wo Qualität, Sicherheit und Compliance
         Pflicht sind. Diese Sorgfalt zahlt sich in jeder Branche aus.
     - title: Vom Prototyp zum Produkt
       text: >-

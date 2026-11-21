@@ -43,13 +43,13 @@ services:
   items:
     - title: AI strategy & adoption
       summary: >-
-        Find out where AI, including AI agents, creates real value in your organization, and
+        Find out where AI creates real value in your organization, and
         introduce it safely.
       points:
         - Use-case discovery and prioritization
-        - AI and agent strategy, roadmap, build vs. buy
-        - Governance, risk and EU AI Act readiness
-        - Workshops and enablement for your teams
+        - AI strategy, roadmap, build vs. buy
+        - Governance, risk, and readiness
+        - Workshops and enablement
     - title: AI-powered software
       summary: >-
         Bring me a digitalization challenge. I design the AI solution and, if you like, build it
@@ -57,14 +57,13 @@ services:
       points:
         - "Solution architecture: LLMs, RAG, agents, classic ML"
         - Prototypes and proofs of concept
-        - Production-ready implementation, e.g. on Azure
-        - Integration with your existing systems and processes
+        - Production-ready implementation
+        - Integration with existing systems and processes
     - title: Data analysis & statistics
       summary: Reliable answers from your data, with methods that stand up to scrutiny.
       points:
         - Statistical analysis and modeling
-        - Incomplete and messy data
-        - Causal questions, study and experiment design
+        - Data mining and processing
         - Forecasting, time series and predictive models
 
 projects:
@@ -81,14 +80,16 @@ why:
         and how to make them work in practice.
     - title: Proven where it matters
       text: >-
-        I build AI for healthcare, where data quality, safety and compliance are not optional.
+        I build AI for healthcare, where quality, safety and compliance are not optional.
         That discipline pays off in any industry.
     - title: From prototype to product
       text: >-
         I lead an AI development team, so I know what it takes to turn a promising PoC into a
         system people rely on.
     - title: Honest advice
-      text: I'm not a one-trick pony! If AI is not the right answer to your problem, you will hear it and the right suggestion from me.
+      text: >-
+        I'm not a one-trick pony! If AI is not the right answer to your problem,
+        you will hear it and the right suggestion from me.
 
 approach:
   label: Process
